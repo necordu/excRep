@@ -26,7 +26,6 @@ class detailController: UIViewController {
         super.viewDidLoad()
 
         viewModel = DetailViewModel()
-        // Do any additional setup after loading the view.
     }
     
 
@@ -41,13 +40,25 @@ class detailController: UIViewController {
         self.view.addSubview(productTable)
         
         
-        sumLabel.text = "\(arrHistory.reduce(0) { $0 + Double($1.amount)! })"
+       // sumLabel.text = "Total: £" + String(format: "%.2f", (arrHistory.reduce(0) { $0 + Double($1.amount)! }))
+        var arrayTotal: [String] = []
+        for obj in arrHistory {
+            
+            guard var str =  viewModel?.convertTransaction(amount: obj.amount, currency: obj.currency) else {
+                continue
+            }
+            str = str.replacingOccurrences(of: "£", with: "")
+            arrayTotal.append(str)
+            
+        }
+        let doubles = arrayTotal.compactMap(Double.init)
+        sumLabel.text = "Total: £" + String(format: "%.2f", doubles.reduce(0, +))
         sumLabel.font = UIFont.boldSystemFont(ofSize: 18)
         sumLabel.backgroundColor = UIColor.lightGray
         sumLabel.snp.makeConstraints { (make) in
             let offset  = (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.shared.statusBarFrame.height
             make.top.equalToSuperview().offset(offset)
-            make.height.equalTo(50)
+            make.height.equalTo(20)
             make.leading.trailing.equalToSuperview()
         }
         
