@@ -11,7 +11,6 @@
 		901DD5EE24028FA4005EB45D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DD5ED24028FA4005EB45D /* AppDelegate.swift */; };
 		901DD5F024028FA4005EB45D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DD5EF24028FA4005EB45D /* SceneDelegate.swift */; };
 		901DD5F224028FA4005EB45D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DD5F124028FA4005EB45D /* ViewController.swift */; };
-		901DD5F524028FA4005EB45D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901DD5F324028FA4005EB45D /* Main.storyboard */; };
 		901DD5F824028FA4005EB45D /* exerciseApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 901DD5F624028FA4005EB45D /* exerciseApp.xcdatamodeld */; };
 		901DD5FA24028FAF005EB45D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 901DD5F924028FAF005EB45D /* Assets.xcassets */; };
 		901DD5FD24028FAF005EB45D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901DD5FB24028FAF005EB45D /* LaunchScreen.storyboard */; };
@@ -19,6 +18,10 @@
 		901DD61124029598005EB45D /* EProductsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DD61024029598005EB45D /* EProductsViewModelProtocol.swift */; };
 		901DD613240295A7005EB45D /* EProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DD612240295A7005EB45D /* EProductsViewModel.swift */; };
 		901DD615240295B3005EB45D /* EProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DD614240295B3005EB45D /* EProducts.swift */; };
+		901DD61C2402A019005EB45D /* transactions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 901DD61A2402A019005EB45D /* transactions.plist */; };
+		901DD61D2402A019005EB45D /* rates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 901DD61B2402A019005EB45D /* rates.plist */; };
+		901DD6212402A43A005EB45D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901DD6202402A43A005EB45D /* Main.storyboard */; };
+		901DD6232402A567005EB45D /* transactionsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DD6222402A567005EB45D /* transactionsObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +30,6 @@
 		901DD5ED24028FA4005EB45D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		901DD5EF24028FA4005EB45D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		901DD5F124028FA4005EB45D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		901DD5F424028FA4005EB45D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		901DD5F724028FA4005EB45D /* exerciseApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = exerciseApp.xcdatamodel; sourceTree = "<group>"; };
 		901DD5F924028FAF005EB45D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		901DD5FC24028FAF005EB45D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,10 @@
 		901DD61024029598005EB45D /* EProductsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EProductsViewModelProtocol.swift; sourceTree = "<group>"; };
 		901DD612240295A7005EB45D /* EProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EProductsViewModel.swift; sourceTree = "<group>"; };
 		901DD614240295B3005EB45D /* EProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EProducts.swift; sourceTree = "<group>"; };
+		901DD61A2402A019005EB45D /* transactions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = transactions.plist; sourceTree = "<group>"; };
+		901DD61B2402A019005EB45D /* rates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rates.plist; sourceTree = "<group>"; };
+		901DD6202402A43A005EB45D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		901DD6222402A567005EB45D /* transactionsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transactionsObject.swift; sourceTree = "<group>"; };
 		A50D643192B415E7227E9727 /* Pods-exerciseApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exerciseApp.release.xcconfig"; path = "Target Support Files/Pods-exerciseApp/Pods-exerciseApp.release.xcconfig"; sourceTree = "<group>"; };
 		FDE725E1630F8B7C16B0136B /* Pods_exerciseApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_exerciseApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,11 +92,11 @@
 				901DD5ED24028FA4005EB45D /* AppDelegate.swift */,
 				901DD5EF24028FA4005EB45D /* SceneDelegate.swift */,
 				901DD5F124028FA4005EB45D /* ViewController.swift */,
-				901DD5F324028FA4005EB45D /* Main.storyboard */,
 				901DD5F924028FAF005EB45D /* Assets.xcassets */,
 				901DD5FB24028FAF005EB45D /* LaunchScreen.storyboard */,
 				901DD5FE24028FAF005EB45D /* Info.plist */,
 				901DD5F624028FA4005EB45D /* exerciseApp.xcdatamodeld */,
+				901DD6202402A43A005EB45D /* Main.storyboard */,
 			);
 			path = exerciseApp;
 			sourceTree = "<group>";
@@ -173,6 +179,9 @@
 		901DD60D2402952E005EB45D /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				901DD61B2402A019005EB45D /* rates.plist */,
+				901DD61A2402A019005EB45D /* transactions.plist */,
+				901DD6222402A567005EB45D /* transactionsObject.swift */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -246,9 +255,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				901DD61D2402A019005EB45D /* rates.plist in Resources */,
+				901DD6212402A43A005EB45D /* Main.storyboard in Resources */,
 				901DD5FD24028FAF005EB45D /* LaunchScreen.storyboard in Resources */,
 				901DD5FA24028FAF005EB45D /* Assets.xcassets in Resources */,
-				901DD5F524028FA4005EB45D /* Main.storyboard in Resources */,
+				901DD61C2402A019005EB45D /* transactions.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +316,7 @@
 				901DD60F24029580005EB45D /* EProductsView.swift in Sources */,
 				901DD5F824028FA4005EB45D /* exerciseApp.xcdatamodeld in Sources */,
 				901DD615240295B3005EB45D /* EProducts.swift in Sources */,
+				901DD6232402A567005EB45D /* transactionsObject.swift in Sources */,
 				901DD613240295A7005EB45D /* EProductsViewModel.swift in Sources */,
 				901DD5EE24028FA4005EB45D /* AppDelegate.swift in Sources */,
 				901DD61124029598005EB45D /* EProductsViewModelProtocol.swift in Sources */,
@@ -315,14 +327,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		901DD5F324028FA4005EB45D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				901DD5F424028FA4005EB45D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		901DD5FB24028FAF005EB45D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

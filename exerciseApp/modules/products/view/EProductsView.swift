@@ -19,6 +19,8 @@ class EProductsView: UIViewController {
         }
     }
     let productsTable = UITableView()
+    
+    var fullDictionary: [String: Any] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +34,22 @@ class EProductsView: UIViewController {
         self.title = "Products"
         
         self.view.addSubview(productsTable)
+        productsTable.delegate = self
+        productsTable.dataSource = self
+        productsTable.register(EProductsCell.self, forCellReuseIdentifier: "productsCell")
+        productsTable.separatorStyle = .none
         productsTable.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
         productsTable.allowsSelection = false
         
+        
+        DispatchQueue.global().async {
+            self.fullDictionary = (self.viewModel?.parsePlist())!
+            DispatchQueue.main.sync {
+                self.productsTable.reloadData()
+            }
+        }
         
     }
     
@@ -48,7 +61,6 @@ extension EProductsView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
-        
     }
     
 }
@@ -56,7 +68,7 @@ extension EProductsView: UITableViewDelegate {
 extension EProductsView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return fullDictionary.keys.count
     }
     
     
@@ -64,7 +76,9 @@ extension EProductsView: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: EProductsCell.cellIdentifier, for: indexPath) as! EProductsCell
         
+        cell.name.text = Array(fullDictionary.keys)[indexPath.row]
         
+        cell.count.text = "\((fullDictionary[Array(fullDictionary.keys)[indexPath.row]] as! [String: Any])["count"]!) transactions >"
         
         return cell
         
@@ -86,6 +100,7 @@ class EProductsCell: UITableViewCell {
         
         contentView.addSubview(name)
         contentView.addSubview(count)
+        contentView.addSubview(separator)
         
         name.font = UIFont.systemFont(ofSize: 14)
         name.textColor = UIColor.black
@@ -93,7 +108,7 @@ class EProductsCell: UITableViewCell {
         name.snp.makeConstraints { (make) in
             make.leading.equalTo(10)
             make.centerY.equalToSuperview()
-            make.width.equalToSuperview().dividedBy(2)
+            make.width.equalToSuperview().dividedBy(2).offset(20)
             make.height.equalTo(16)
         }
         
@@ -101,10 +116,20 @@ class EProductsCell: UITableViewCell {
         count.textColor = UIColor.gray
         count.textAlignment = .right
         count.snp.makeConstraints { (make) in
-            make.trailing.equalToSuperview().offset(10)
+            make.trailing.equalToSuperview().offset(-10)
             make.centerY.equalToSuperview()
-            make.width.equalToSuperview().dividedBy(2)
+            make.width.equalToSuperview().dividedBy(2).offset(20)
             make.height.equalTo(16)
+        }
+        
+        separator.backgroundColor = UIColor.lightGray
+        separator.snp.makeConstraints { (make) in
+            
+            make.bottom.equalToSuperview().offset(-1)
+            make.leading.equalTo(name.snp.leading)
+            make.height.equalTo(1)
+            make.width.equalToSuperview()
+            
         }
         
     }

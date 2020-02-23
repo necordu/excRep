@@ -15,6 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
+        
         let rootNavigation = UINavigationController(rootViewController: EProductsView())
         
         window?.rootViewController = rootNavigation

@@ -14,5 +14,6 @@ protocol EProductsViewModelProtocol {
     
     var products: BehaviorRelay<[EProducts]> { get }
     
+    func parsePlist() -> [String: Any]
     
 }
