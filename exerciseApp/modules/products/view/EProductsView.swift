@@ -41,7 +41,6 @@ class EProductsView: UIViewController {
         productsTable.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
-        productsTable.allowsSelection = false
         
         
         DispatchQueue.global().async {
@@ -59,6 +58,11 @@ class EProductsView: UIViewController {
 extension EProductsView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let viewController = detailController()
+        viewController.navTitle = Array(fullDictionary.keys)[indexPath.row]
+        viewController.arrHistory = ((fullDictionary[Array(fullDictionary.keys)[indexPath.row]] as! [String: Any])["arr"] as! [transactionsObject])
+        self.navigationController?.pushViewController(viewController, animated: true)
         
         
     }

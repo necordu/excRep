@@ -22,6 +22,10 @@
 		901DD61D2402A019005EB45D /* rates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 901DD61B2402A019005EB45D /* rates.plist */; };
 		901DD6212402A43A005EB45D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901DD6202402A43A005EB45D /* Main.storyboard */; };
 		901DD6232402A567005EB45D /* transactionsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DD6222402A567005EB45D /* transactionsObject.swift */; };
+		901DD6252402C9D1005EB45D /* detailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DD6242402C9D0005EB45D /* detailController.swift */; };
+		901DD6272402CA00005EB45D /* DetailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DD6262402CA00005EB45D /* DetailViewModelProtocol.swift */; };
+		901DD6292402CA0E005EB45D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DD6282402CA0E005EB45D /* DetailViewModel.swift */; };
+		901DD62B2402DA31005EB45D /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901DD62A2402DA31005EB45D /* Detail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		901DD61B2402A019005EB45D /* rates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rates.plist; sourceTree = "<group>"; };
 		901DD6202402A43A005EB45D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		901DD6222402A567005EB45D /* transactionsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transactionsObject.swift; sourceTree = "<group>"; };
+		901DD6242402C9D0005EB45D /* detailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailController.swift; sourceTree = "<group>"; };
+		901DD6262402CA00005EB45D /* DetailViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelProtocol.swift; sourceTree = "<group>"; };
+		901DD6282402CA0E005EB45D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		901DD62A2402DA31005EB45D /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		A50D643192B415E7227E9727 /* Pods-exerciseApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exerciseApp.release.xcconfig"; path = "Target Support Files/Pods-exerciseApp/Pods-exerciseApp.release.xcconfig"; sourceTree = "<group>"; };
 		FDE725E1630F8B7C16B0136B /* Pods_exerciseApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_exerciseApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -158,6 +166,7 @@
 		901DD60A24029511005EB45D /* model */ = {
 			isa = PBXGroup;
 			children = (
+				901DD62A2402DA31005EB45D /* Detail.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -165,6 +174,7 @@
 		901DD60B24029519005EB45D /* view */ = {
 			isa = PBXGroup;
 			children = (
+				901DD6242402C9D0005EB45D /* detailController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -172,6 +182,8 @@
 		901DD60C2402951D005EB45D /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				901DD6262402CA00005EB45D /* DetailViewModelProtocol.swift */,
+				901DD6282402CA0E005EB45D /* DetailViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -314,13 +326,17 @@
 			files = (
 				901DD5F224028FA4005EB45D /* ViewController.swift in Sources */,
 				901DD60F24029580005EB45D /* EProductsView.swift in Sources */,
+				901DD6252402C9D1005EB45D /* detailController.swift in Sources */,
 				901DD5F824028FA4005EB45D /* exerciseApp.xcdatamodeld in Sources */,
+				901DD6272402CA00005EB45D /* DetailViewModelProtocol.swift in Sources */,
 				901DD615240295B3005EB45D /* EProducts.swift in Sources */,
 				901DD6232402A567005EB45D /* transactionsObject.swift in Sources */,
+				901DD6292402CA0E005EB45D /* DetailViewModel.swift in Sources */,
 				901DD613240295A7005EB45D /* EProductsViewModel.swift in Sources */,
 				901DD5EE24028FA4005EB45D /* AppDelegate.swift in Sources */,
 				901DD61124029598005EB45D /* EProductsViewModelProtocol.swift in Sources */,
 				901DD5F024028FA4005EB45D /* SceneDelegate.swift in Sources */,
+				901DD62B2402DA31005EB45D /* Detail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

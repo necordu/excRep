@@ -21,7 +21,6 @@ class EProductsViewModel: NSObject, EProductsViewModelProtocol {
         let plistPath: String? = Bundle.main.path(forResource: "transactions", ofType: "plist")
         let plistXML = FileManager.default.contents(atPath: plistPath!)!
         do {
-            //let translation = try JSONDecoder().decode(Translator.self, from: data!)
             plistData = try PropertyListSerialization.propertyList(from: plistXML, options: .mutableContainersAndLeaves, format: &propertyListFormat)  as! NSArray
             let resultsObj = NSMutableArray()
             for obj in plistData {
@@ -56,7 +55,6 @@ class EProductsViewModel: NSObject, EProductsViewModelProtocol {
                 }
                 
             }
-            print(fillDictionary)
             return fillDictionary
         } catch {
             print("Error reading plist: \(error), format: \(propertyListFormat)")
